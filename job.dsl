@@ -6,9 +6,7 @@ job('qa-performance-testing') {
     }
 
     properties {
-        diskUsageProperty {
-            plugin('disk-usage@0.28')
-        }
+        
         mavenRepoCleanerProperty {
             plugin('maven-repo-cleaner@1.2')
             notOnThisProject(false)
