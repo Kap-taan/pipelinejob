@@ -7,10 +7,7 @@ job('qa-performance-testing') {
 
     properties {
         
-        mavenRepoCleanerProperty {
-            plugin('maven-repo-cleaner@1.2')
-            notOnThisProject(false)
-        }
+        
         parameters {
             choiceParam('ENVIRONMENT', ['ENV', 'UAT'], 'Select the environment')
             choiceParam('LOB', ['LOB', 'KBPL_Demo_load_2.jmx', 'LOAD_CCPBM_myanmar.jmx', 'Unnati_Flutter_Load_Test_UAT.jmx', 'Nepal_Load_Test_DEMO.jmx', 'SIMA_SG_Load_Test_DEMO.jmx', 'LOAD_mars_italy_UAT.jmx', 'LOAD_HCCB_DEMO.jmx', 'Sample_order_swire_UAT.jmx', 'LOAD_Marssampling_DEMO.jmx', 'LOAD_Pladis_DEMO.jmx', 'LOAD_COKE_SLK_DEMO.jmx', 'LOAD_digivyapaar_DEMO.jmx', 'BEPENSA_LOAD_DEMO.jmx'], 'Select your LOB')
