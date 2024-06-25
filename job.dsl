@@ -6,14 +6,11 @@ job('qa-performance-testing') {
     }
 
     properties {
-        jiraProjectProperty {
-            // Specify siteName and projectKey
-            siteName('JIRA_SITE_NAME')  // Replace with your actual Jira site name
-            projectKey('PROJECT_KEY')   // Replace with your actual Jira project key
+        diskUsageProperty {
+            plugin('disk-usage@0.28')
         }
-        // Assuming these plugins don't need to be explicitly referenced
-        diskUsageProperty()
         mavenRepoCleanerProperty {
+            plugin('maven-repo-cleaner@1.2')
             notOnThisProject(false)
         }
         parameters {
